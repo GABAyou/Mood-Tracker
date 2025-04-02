@@ -1,2 +1,2 @@
 # Mood-Tracker
-save note3s about mood.
+save notes about mood.
