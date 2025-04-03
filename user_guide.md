@@ -2,7 +2,7 @@
 ## User Guide
 
 ### Introduction
-The Mood Tracker is a simple desktop application that allows you to record and track your moods over time. This application provides an easy-to-use interface for entering your current mood, saving it with a timestamp, and viewing your mood history.
+The Mood Tracker is a simple desktop application that allows you to record and track your moods over time. This application provides an easy-to-use interface for entering your current mood, saving it with a timestamp, and viewing your mood history. It features a customizable interface with dark/light theme options and word wrap functionality.
 
 ### Installation
 
@@ -34,10 +34,23 @@ The Mood Tracker is a simple desktop application that allows you to record and t
 - **Delete Selected**: Select an entry from the list and click "Delete Selected" to remove it
 - **Clear All**: Click "Clear All" to delete all mood entries (you'll be asked to confirm)
 
+#### Theme Switching
+- Click the theme toggle button (☀️/🌙) in the top-right corner to switch between light and dark modes
+- Light mode uses a black-on-white color scheme
+- Dark mode uses a white-on-black color scheme
+- Your theme preference is remembered between sessions
+
+#### Word Wrap
+- **Input Field Word Wrap**: Toggle the "Wrap" checkbox next to the input field to enable/disable word wrap
+- **List View Word Wrap**: Toggle the "Wrap" checkbox above the list to enable/disable word wrap for entries
+- Word wrap automatically adjusts when you resize the application window
+- Your word wrap preferences are remembered between sessions
+
 ### Data Storage
 - Your mood entries are stored in a SQLite database file named `mood_tracker.db`
-- This file is created in the same directory as the application
-- Your data persists between application launches
+- Your application preferences (theme, word wrap settings) are stored in `mood_tracker_config.json`
+- These files are created in the same directory as the application
+- Your data and preferences persist between application launches
 
 ### Troubleshooting
 
@@ -49,6 +62,10 @@ The Mood Tracker is a simple desktop application that allows you to record and t
 - Check that you're running the application from the same location each time
 - The database is stored relative to the executable location
 
+#### Theme or Word Wrap Settings Not Saving
+- Ensure the application has write permissions to its directory
+- If issues persist, you can manually delete the `mood_tracker_config.json` file to reset to defaults
+
 #### Other Issues
 - Close and restart the application
 - If problems persist, try uninstalling and reinstalling the application
@@ -57,7 +74,7 @@ The Mood Tracker is a simple desktop application that allows you to record and t
 
 #### Executable Version
 - Simply delete the `MoodTracker.exe` file
-- If you want to remove your data, also delete the `mood_tracker.db` file
+- If you want to remove your data and preferences, also delete the `mood_tracker.db` and `mood_tracker_config.json` files
 
 #### Installer Version
 - Uninstall through Windows Control Panel or Settings
